@@ -1,0 +1,7 @@
+.contactDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-bottom: 1px solid gray;
+}
