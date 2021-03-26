@@ -1,0 +1,19 @@
+1) Context API is used in this project to store contacts, chats.
+2) localStorage of the browser is used to persist the contacts and chats data.
+
+
+3) index.js:1 Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Transition which is inside StrictMode. 
+  Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node
+
+  This above warning can be solved by Removing StrictMode from index.js
+    <React.StrictMode>
+       <App />
+    </React.StrictMode>
+    
+    But StrictMode is a tool for highlighting potential problems in an application. It activates additional checks and warnings for its descendants, such as:
+
+    1. Identifying components with unsafe lifecycles
+    2. Warning about legacy string ref API usage
+    3. Warning about deprecated findDOMNode usage
+    4. Detecting unexpected side effects
+    5. Detecting legacy context API

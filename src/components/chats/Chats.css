@@ -1,0 +1,11 @@
+.individualChat {
+  cursor: pointer;
+}
+
+.selectedChat {
+  background: #84c8c0 !important;
+}
+
+.selectedChat a {
+  color: white;
+}

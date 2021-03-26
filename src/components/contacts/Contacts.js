@@ -5,7 +5,7 @@ import "./Contacts.css";
 const Contacts = ({ contacts }) => {
   return (
     <ListGroup variant="flush">
-      {contacts.map((contact, index) => {
+      {contacts && contacts.map((contact, index) => {
         return (
           <ListGroup.Item key={contact.userId}>
             {contact.name}

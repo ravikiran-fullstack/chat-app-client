@@ -5,18 +5,18 @@ import Login from "./components/login/Login";
 
 import useLocalStorage from "./hooks/useLocalStorage";
 
-import { ContactProvider } from "./context/ContactContext";
+import { ContactContextProvider } from "./context/ContactContext";
 import { ChatsContextProvider } from "./context/ChatsContext";
 
 const App = () => {
   const [userId, setUserId] = useLocalStorage("userId");
   const dashBoard = (userId) => {
     return (
-      <ContactProvider>
+      <ContactContextProvider>
         <ChatsContextProvider>
           <Dashboard userId={userId} />
         </ChatsContextProvider>
-      </ContactProvider>
+      </ContactContextProvider>
     );
   };
 

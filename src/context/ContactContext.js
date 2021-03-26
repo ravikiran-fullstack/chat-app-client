@@ -2,9 +2,11 @@ import React, { useState, createContext, useEffect } from "react";
 
 export const ContactContext = createContext();
 
-export const ContactProvider = (props) => {
+export const ContactContextProvider = (props) => {
+  
   const contactStored = JSON.parse(localStorage.getItem('chat-app-contacts'));
-  const [contacts, setContacts] = useState(contactStored);
+  const userContacts = contactStored || [];
+  const [contacts, setContacts] = useState(userContacts);
   
   const updateContact = (newContact) => {
     const storedContacts = [...contacts, newContact];
@@ -12,7 +14,6 @@ export const ContactProvider = (props) => {
   }
 
   useEffect(()=> {
-    console.log('updating stored contacts');
     localStorage.setItem('chat-app-contacts', JSON.stringify(contacts));
   }, [contacts]);
 

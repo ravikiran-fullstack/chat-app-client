@@ -12,7 +12,6 @@ const ChatModal = ({ closeModal }) => {
   const [selectedContactIds, setSelectedContactIds] = useState([]);
 
   const handleCheckboxChange = (id) => {
-    console.log("id", id, selectedContactIds);
     setSelectedContactIds((prevSelectedContactIds) => {
       if (prevSelectedContactIds.includes(id)) {
         return prevSelectedContactIds.filter((prevId) => prevId !== id);
